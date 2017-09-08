@@ -39,7 +39,7 @@ background-color:  #f4bbd8;
 
 .main-header{
   padding: 5px;
-	background-color: black;
+	background-color: #b087f2;
 	display: flex;
 	justify-content: flex-end;
 	position: fixed;
@@ -60,7 +60,7 @@ header div button{
 
 text-align: center;
 padding: 10px;
-background-color: red;
+background-color: gainsboro;
 margin: 20px;
 padding: 0;
 border-width: 2px;
@@ -109,7 +109,7 @@ div.imagen-logo{
 }
 div.presentacion{
 
-background-color: black;
+background-color: #b087f2;
 width: 100%;
 height: 320px;
 margin-bottom: 40px;
@@ -123,7 +123,7 @@ margin-bottom: 40px;
 font-size: 50px;
 font-family: verdana sans-serif;
 text-align: center;
-color: red;
+color: gainsboro;
 
 }
 
@@ -132,7 +132,7 @@ color: red;
 font-size: 100px;
 font-family: verdana sans-serif;
 text-align: center;
-color: red;}
+color: gainsboro;}
 
 div.boton-presentacion{
 
@@ -143,7 +143,7 @@ div.boton-presentacion{
 #registrate2	{
 
 	padding: 12px;
-	background-color: red;
+	background-color: gainsboro;
 	font-size: 30px;
 	font-family: sans-serif;
 	margin-top: 22px;
