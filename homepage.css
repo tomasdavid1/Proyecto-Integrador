@@ -24,10 +24,16 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+*{
+font-family: 'Cabin Sketch', cursive;
+
+}
+
 
 body{
 font-family: sans-serif;
-background-color:  #f4bbd8;
+background-color:  #282828;
+font-family: 'Cabin Sketch', cursive;
 
 }
 .container{
@@ -39,7 +45,7 @@ background-color:  #f4bbd8;
 
 .main-header{
   padding: 5px;
-	background-color: black;
+	background-color: #282828;
 	display: flex;
 	justify-content: flex-end;
 	position: fixed;
@@ -60,7 +66,7 @@ header div button{
 
 text-align: center;
 padding: 10px;
-background-color: red;
+background-color: gainsboro;
 margin: 20px;
 padding: 0;
 border-width: 2px;
@@ -68,7 +74,7 @@ border-color: white;
 background: transparent;
 font-weight: 400;
 font-size: 20px;
-font-family: inherit;
+font-family: 'Cabin Sketch', cursive;
 padding: 5px 12px;
 border-width: 0;§
 border-radius: 4px;
@@ -84,6 +90,7 @@ transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
     height: auto;
     background: transparent;
     display: block;
+		border-radius: 53%;
 
 }
 
@@ -92,7 +99,7 @@ transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 div.imagen-logo{
 	width: 35%;
 	text-align: center;
-	transform: translateX(100%);
+	transform: translateX(94%);
 	padding-top: 70px;
 }
 
@@ -109,7 +116,7 @@ div.imagen-logo{
 }
 div.presentacion{
 
-background-color: black;
+background-color: #282828;
 width: 100%;
 height: 320px;
 margin-bottom: 40px;
@@ -121,18 +128,19 @@ margin-bottom: 40px;
 #Bienvenidos{
 
 font-size: 50px;
-font-family: verdana sans-serif;
+font-family: 'Cabin Sketch', cursive;
 text-align: center;
-color: red;
+color: gainsboro;
 
 }
 
 #IKIGAI{
 
 font-size: 100px;
-font-family: verdana sans-serif;
+font-family: 'Cabin Sketch', cursive;
 text-align: center;
-color: red;}
+color: gainsboro;
+}
 
 div.boton-presentacion{
 
@@ -143,9 +151,9 @@ div.boton-presentacion{
 #registrate2	{
 
 	padding: 12px;
-	background-color: red;
+	background-color: gainsboro;
 	font-size: 30px;
-	font-family: sans-serif;
+	font-family: 'Cabin Sketch', cursive;
 	margin-top: 22px;
 
 
@@ -185,6 +193,16 @@ h2{
 
 }
 
+		p{
+			font-size: 150%;
+			text-align: center;
+			margin-left: 1vw;
+			margin-right: 1vw;
+			margin-top: 1vh;
+			margin-bottom: 1vh;
+
+
+		}
 
 
 
@@ -200,9 +218,9 @@ article a{
 text-decoration: none;
 text-align: right;
 color: white;
-background-color: #f4bbd8;
+background-color: #282828;
 font-weight: bold;
-font-family: sans-serif;
+font-family: 'Cabin Sketch', cursive;
 
 }
 
@@ -211,7 +229,7 @@ li a{
 text-decoration: none;
 list-style: none;
 color: white;
-font-family: sans-serif;
+font-family: 'Cabin Sketch', cursive;
 text-align: center;
 
 
@@ -228,7 +246,7 @@ text-align: center;
 
 }
 #naveg li{
-border: 0.2px #f4bbd8 solid;
+border: 0.2px #282828 solid;
 float: right;
 display: inline;
 position: relative;
@@ -245,7 +263,7 @@ padding-bottom: 2%;
 }
 
 .main-nav a{
-background-color: #f4bbd8;
+background-color: #282828;
 display: block;
 margin-bottom: 0.5%;
 padding-top: 2%;
@@ -254,7 +272,7 @@ padding-bottom: 2%;
 
 
 .main-footer li{
-  background-color: #f4bbd8;
+  background-color: #282828;
 
 }
 
