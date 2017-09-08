@@ -67,7 +67,7 @@ border-width: 2px;
 border-color: white;
 background: transparent;
 font-weight: 400;
-font-size: 20px;
+font-size: 40px;
 font-family: inherit;
 padding: 5px 12px;
 border-width: 0;§
@@ -80,22 +80,31 @@ transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
 .logo{
-	width: 100%;
-    height: auto;
-    background: transparent;
-    display: block;
-
+width: 100%;
+height: auto;
+background: transparent;
+display: block;
 }
 
+.delay a{
+
+transition-delay: 2s;
+transition-timing-function: ease-in-out;
+
+}
 
 
 div.imagen-logo{
-	width: 35%;
+	width: 100%;
 	text-align: center;
-	transform: translateX(100%);
 	padding-top: 70px;
 }
 
+.presentacion div{
+
+
+
+}
 #naveg{
       margin-left: 50%;
 
@@ -185,6 +194,27 @@ h2{
 
 }
 
+.equipo{
+
+	display: flex;
+	justify-content: center;
+	width: 70%;
+	background: gainsboro;
+
+}
+
+.fotoDePerfil{
+
+border-radius: 50%;
+width: 20%;
+margin: 10px;
+border: solid 2px;
+border-color:#c15757;
+
+
+
+}
+
 
 
 
@@ -229,7 +259,6 @@ text-align: center;
 }
 #naveg li{
 border: 0.2px #f4bbd8 solid;
-float: right;
 display: inline;
 position: relative;
 top: -773px;
