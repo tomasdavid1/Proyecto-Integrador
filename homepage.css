@@ -94,15 +94,25 @@ transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 
 }
 
+.delay a{
+
+transition-delay: 2s;
+transition-timing-function: ease-in-out;
+
+}
 
 
 div.imagen-logo{
-	width: 35%;
+	width: 100%;
 	text-align: center;
-	transform: translateX(94%);
 	padding-top: 70px;
 }
 
+.presentacion div{
+
+
+
+}
 #naveg{
       margin-left: 50%;
 
@@ -160,6 +170,13 @@ div.boton-presentacion{
 }
 
 
+#quien{ display: none;
+}
+#que{ display: none;
+
+};
+
+
 section{
 width: 100%;
 margin:auto;
@@ -193,19 +210,46 @@ h2{
 
 }
 
-		p{
-			font-size: 150%;
-			text-align: center;
-			margin-left: 1vw;
-			margin-right: 1vw;
-			margin-top: 1vh;
-			margin-bottom: 1vh;
+.equipo{
+
+	display: flex;
+	justify-content: center;
+	width: 70%;
+	background: gainsboro;
+	background-color: transparent;
+	margin: 15%;
+justify-content: space-between;
+
+}
+
+.fotoDePerfil{
+
+border-radius: 50%;
+width: 20%;
+margin: 15%;
+border: solid 2px;
+border-color:#c15757;
+width: 80%;
 
 
-		}
+
+}
+
+div.perfil{
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
 
 
 
+p{
+	font-size: 150%;
+	text-align: center;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
 
 .main-nav{
     padding: initial;
@@ -247,7 +291,6 @@ text-align: center;
 }
 #naveg li{
 border: 0.2px #282828 solid;
-float: right;
 display: inline;
 position: relative;
 top: -773px;
@@ -289,5 +332,17 @@ padding-bottom: 2%;
   padding-bottom: 2%;
   text-align: center;
   margin: auto;
+
+}
+
+
+h3 {
+
+background-color: #282828;
+text-align: center;
+padding: 10px;
+border-radius: 15%;
+font-family: 'Cabin Sketch', cursive;
+font-size: 40px;
 
 }
