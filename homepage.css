@@ -57,13 +57,12 @@ height: 15%;
 .main-header p{
 
 	float: left;
-	width: 20%;
-	padding: 5%;
+	width: 20%
 	margin-left: 3%;
 	margin-right: 10%;
 	color: white;
 	width: 20%;
-	font-size: 150%;
+	font-size: 10vw;
 	margin-top: 5%;
 	margin-left: 10%;
 
@@ -81,6 +80,7 @@ width: 30%;
 }
 header button{
 
+	float: left;
 	text-align: center;
 	    padding: 5px;
 	    background-color: gainsboro;
@@ -89,11 +89,12 @@ header button{
 	    border-color: white;
 	    background: transparent;
 	    font-weight: 400;
-	    font-size: 15px;
+	    font-size: 5vw;
 	    font-family: 'Cabin Sketch', cursive;
 	    padding: 5px 12px;
 	    border-width: 0;
-	    margin-top: 3%;
+	    margin-top: 3vw;
+			margin-left: 10vw;
 	    color: : rgba(255,255,255,0.4);
 	    color: #fff;
 	    -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
@@ -101,28 +102,10 @@ header button{
 
 }
 
-/*.main-header{
-  padding: 5px;
-	background-color: #282828;
-	display: flex;
-	justify-content: flex-end;
-	position: fixed;
-	width: 100%;
-	z-index: 10;
-
-}
-
-header div{
-
-			padding-right: 0;
-			padding-left: 0;
-
-
-}
 
 
 
-*/
+
 .logo{
 	width: 100%;
     height: auto;
@@ -173,6 +156,18 @@ margin-bottom: 40px;
 
 }
 
+#que-somos{
+color: gainsboro;
+background-color: #282828;
+
+}
+
+#quienes-somos{
+	color: gainsboro;
+	background-color: #282828;
+
+}
+
 #Bienvenidos{
 
 font-size: 50px;
@@ -209,7 +204,7 @@ div.boton-presentacion{
 }
 
 
-#quien{ display: none;
+#quien{
 	font-size: 150%;
 	text-align: center;
 	margin-left: 1vw;
@@ -217,7 +212,7 @@ div.boton-presentacion{
 	margin-top: 1vh;
 	margin-bottom: 1vh;
 }
-#que{ display: none;
+#que{
 	font-size: 150%;
 	text-align: center;
 	margin-left: 1vw;
@@ -242,7 +237,7 @@ margin-bottom: 6vh;
 
 
 div.preguntas{
-width: 30%;
+width: 35%;
 text-align: center;
 display: flex;
 margin-left: 7%;
@@ -410,5 +405,145 @@ padding: 10px;
 border-radius: 15%;
 font-family: 'Cabin Sketch', cursive;
 font-size: 40px;
+
+}
+
+.texto-presentacion{
+	display: none;
+}
+
+@media (min-width:640px)  {
+
+header{
+
+height: 10vw;
+
+
+
+}
+
+.main-header p{
+
+	height: 80%;
+	font-size: 5vw;
+	float: left;
+	width: 20% margin-left: 3%;
+	margin-right: 0%;
+	color: white;
+	width: 20%;
+	font-size: 7vw;
+	margin-top: 1vw;
+	margin-left: 10vw;
+
+}
+.main-header button{
+
+font-size: 3vw;
+margin-left: 30vw;
+
+margin-right: -2vw;
+
+
+}
+
+#IKIGAI{
+
+margin-top: 10vw;
+font-size: 10vw;
+ma
+
+}
+
+.atr{
+
+	overflow: hidden;
+	width: 100%;
+
+}
+.logo{
+	width: 40vw;
+	text-align: center;
+	padding-top: 5vw;
+	float: left;
+	margin: 3vw 10vw;
+
+
+}
+#inicia-sesion{
+
+margin-left: 5vw;
+
+}
+#registrate2{
+
+	padding: 1vw;
+	background-color: gainsboro;
+	font-size: 3vw;
+	font-family: 'Cabin Sketch', cursive;
+	margin-top: 2vw;
+
+}
+
+div.boton-presentacion{
+
+margin-left: none;
+
+
+}
+.texto-presentacion{
+	display: block;
+
+}
+
+#team{
+	overflow: hidden;
+
+
+}
+.equipo{
+	overflow: hidden;
+
+}
+
+.perfil{
+	margin-top: 3vh;
+float: left;
+width: 30%;
+
+}
+
+#que-somos{
+	font-size: 350%;
+
+}
+#quienes-somos{
+font-size: 350%;
+
+}
+
+#que{
+	color: gainsboro;
+	font-size: 200%;
+	margin-left: 3vw;
+	margin-top: 3vw;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+
+}
+
+#quien{
+	color: gainsboro;
+	font-size: 200%;
+
+}
+footer{
+
+	overflow: hidden;
+}
+footer ul{
+display: flex;
+justify-content: space-between;
+
+}
 
 }

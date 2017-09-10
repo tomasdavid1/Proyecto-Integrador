@@ -1,26 +1,18 @@
 
 @media (min-width:580px){
-  .main-nav{
+  .main-header{
       list-style: none;
       display: block;
       margin-bottom: 0.5%;
       padding-top: 2%;
       padding-bottom: 2%;
       text-align: center;
-      margin: auto;
+      
+
 
   }
-	.main-nav ul{
-			display: flex;
-			justify-content: space-between;
 
-	}
-  ul{
-		display:inline;
-    width: 98.33vw;
-    margin: auto;
-    overflow: hidden;
-  }
+
 
   .banner img{
     display: block;
