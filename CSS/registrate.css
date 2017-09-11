@@ -1,0 +1,144 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+header{
+  font-size: 7vw;
+  text-align: center;
+  margin: 5vw 20vw;
+
+
+}
+
+body{
+
+display: block;
+width: 100%;
+
+}
+
+div.imagen-logo{
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 40vw;
+
+}
+div.imagen-logo img{
+
+border-radius: 50%;
+width: 100%;
+
+}
+
+
+section.formulario{
+
+overflow: hidden;
+margin-left: auto;
+margin-right: auto;
+background-color: #e8f0ff;
+border: 3px solid ;
+border-radius: 4px;
+width: 70%;
+box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+}
+
+div.registrate{
+	background-color: gainsboro;
+	    text-align: left;
+	    padding-left: 4vw;
+	    padding-top: 1vw;
+	    border: 2px solid;
+	    font-size: 8.5vw;
+	    padding-bottom: 2vw;
+
+
+}
+
+.cuerpo{
+
+padding: 3vw;
+
+}
+
+.campo{
+
+
+font-size: 6vw;
+
+
+}
+
+input{
+
+	display: block;
+	width: 100%;
+	height: 10vw;
+	font-size: 5vw;
+	line-height: 1.428571429;
+	color: #555;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	margin-bottom: 5vw;
+	margin-top: 5vw;
+
+}
+
+.enviar{
+
+margin-left: 1vw;
+
+
+}
+
+.cuerpo button{
+
+	text-align: center;
+	    font-size: 100%;
+	    border: 1px solid;
+	    border-radius: 3px;
+	    width: 40%;
+	    margin-left: 3%;
+	    border-color: gainsboro;
+}
+
+.mandale{
+
+	margin-left: auto;
+margin-right: auto;
+background-color: #fff;
+border: 3px solid;
+border-radius: 4px;
+width: 70%;
+background-color: #d3e2ff;
+
+
+
+}
