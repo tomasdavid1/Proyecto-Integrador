@@ -25,15 +25,20 @@ footer, header, hgroup, menu, nav, section {
 }
 
 *{
-font-family: 'Cabin Sketch', cursive;
+font-family: 'roboto', sans serif;
 
 }
-
+#hamb{
+	display: none;
+}
+#menu-footer{
+	display: none;
+}
 
 body{
 font-family: sans-serif;
 background-color:  #282828;
-font-family: 'Cabin Sketch', cursive;
+font-family: 'roboto', sans serif;
 
 }
 .container{
@@ -42,6 +47,14 @@ font-family: 'Cabin Sketch', cursive;
 
 }
 
+.ahre{
+	background-color: #282828;
+	text-align: center;
+}
+.preguntas #quienes-somos{
+	background-color: transparent;
+	color: rgb(254, 209 , 54);
+}
 header{
 
 width: 100%;
@@ -57,7 +70,7 @@ height: 15%;
 .main-header p{
 
 	float: left;
-	width: 20%
+	width: 20%;
 	margin-left: 3%;
 	margin-right: 10%;
 	color: white;
@@ -90,7 +103,7 @@ header button{
 	    background: transparent;
 	    font-weight: 400;
 	    font-size: 5vw;
-	    font-family: 'Cabin Sketch', cursive;
+	    font-family: 'roboto', sans serif;
 	    padding: 5px 12px;
 	    border-width: 0;
 	    margin-top: 3vw;
@@ -105,6 +118,9 @@ header button{
 
 
 
+#logochico{
+	width: 100%;
+}
 
 .logo{
 	width: 100%;
@@ -112,14 +128,6 @@ header button{
     background: transparent;
     display: block;
 		border-radius: 53%;
-
-}
-
-.delay a{
-
-transition-delay: 2s;
-transition-timing-function: ease-in-out;
-
 }
 
 
@@ -129,28 +137,20 @@ div.imagen-logo{
 	padding-top: 70px;
 }
 
-.presentacion div{
 
-
-
-}
 #naveg{
       margin-left: 50%;
 
       }
 
-.contenido{
 
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
 div.presentacion{
 
 background-color: #282828;
 width: 100%;
 height: 320px;
 margin-bottom: 40px;
+    margin-left: -4%;
 
 
 
@@ -165,13 +165,14 @@ background-color: #282828;
 #quienes-somos{
 	color: gainsboro;
 	background-color: #282828;
+	text-align: center;
 
 }
 
 #Bienvenidos{
 
 font-size: 50px;
-font-family: 'Cabin Sketch', cursive;
+font-family: 'roboto', sans serif;
 text-align: center;
 color: gainsboro;
 
@@ -180,7 +181,7 @@ color: gainsboro;
 #IKIGAI{
 
 font-size: 100px;
-font-family: 'Cabin Sketch', cursive;
+font-family: 'roboto', sans serif;
 text-align: center;
 color: gainsboro;
 }
@@ -192,17 +193,42 @@ div.boton-presentacion{
 	margin-left: 3%;
 }
 
+#ideas{
+	color: #64cd6b;
+	margin-left: 10%;
+	text-align: center;
+	font-size: 2.6vw;
+}
+.presentacion div{
+	margin-left: 10%;
+}
 #registrate2	{
 
 	padding: 12px;
-	background-color: gainsboro;
+	background-color: #fed136;
 	font-size: 30px;
-	font-family: 'Cabin Sketch', cursive;
+	font-family: 'roboto', sans serif;
 	margin-top: 22px;
-
+	border-radius: 5%;
+	margin-left: inherit;
 
 }
 
+#registrate2:hover{
+	border: solid #64cd6b 2px;
+
+}
+#que-somos{
+	text-align: center;
+}
+
+#SPRITE{
+color: #fed136;
+
+}
+#quien a{
+	color: #fed136;
+}
 
 #quien{
 	font-size: 150%;
@@ -211,15 +237,15 @@ div.boton-presentacion{
 	margin-right: 1vw;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
+	color: gainsboro;
 }
 #que{
 	font-size: 150%;
-	text-align: center;
 	margin-left: 1vw;
 	margin-right: 1vw;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
-
+	text-align: center;
 };
 
 
@@ -253,7 +279,8 @@ h2{
 	margin: 10px;
 	font-size: 25px;
 	border-radius: 5px;
-	background-color: #ffe5fe
+	color: gainsboro;
+
 
 }
 /*.equipo{
@@ -278,12 +305,85 @@ background-color: transparent;
 
 }
 
+a{
+	text-decoration: none;
+
+}
+
+button a:hover{
+color:#64cd6b;
+
+}
+
+
+
+#inicia-sesion a:hover{
+	color: orange;
+
+
+
+}
+
+
+button a{color: #282828;
+text-decoration: none;
+color: gainsboro;
+
+
+
+}
+
+article a{
+text-decoration: none;
+text-align: right;
+color: white;
+background-color: #282828;
+font-weight: bold;
+font-family: 'roboto', sans-serif;
+
+}
+
+#footerliquid li a:hover{
+	color: #64cd6b;
+}
+#link{
+	color: #282828;
+	transition: all 3s linear;
+	-webkit- transition: 3s;
+}
+li a{
+text-decoration: none;
+list-style: none;
+color: white;
+font-family: 'roboto', sans-serif;
+text-align: center;
+
+
+}
+
+#perfil{
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+}
+.redes{
+text-align: center;
+
+}
+
+.redes a img{
+
+width: 40px;
+}
+
 .fotoDePerfil{
 
 border-radius: 50%;
 width: 20%;
-border: solid 2px;
-border-color:#c15757;
+border: solid 3px;
+border-color: #fed136;
 width: 80%;
 margin-top: 8%;
 margin-left: 11%;
@@ -309,6 +409,7 @@ div.perfil{
 	margin-right: 1vw;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
+	color: gainsboro;
 
 }
 
@@ -325,7 +426,7 @@ text-align: right;
 color: white;
 background-color: #282828;
 font-weight: bold;
-font-family: 'Cabin Sketch', cursive;
+font-family: 'roboto', sans serif;
 
 }
 
@@ -334,7 +435,7 @@ li a{
 text-decoration: none;
 list-style: none;
 color: white;
-font-family: 'Cabin Sketch', cursive;
+font-family: 'roboto', sans serif;
 text-align: center;
 
 
@@ -403,13 +504,130 @@ background-color: #282828;
 text-align: center;
 padding: 10px;
 border-radius: 15%;
-font-family: 'Cabin Sketch', cursive;
+font-family: 'roboto', sans serif;
 font-size: 40px;
 
 }
 
 .texto-presentacion{
 	display: none;
+}
+
+
+#nuestroteam{
+  font-size: 40px;
+  color: #gainsboro;
+  text-align: center;
+  margin: 0;
+}
+
+h3{
+	color: gainsboro;
+}
+.contenido{
+	background-color: #282828;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#quienes-somos{
+	color: gainsboro;
+	background-color: gainsboro;
+	text-align: center;
+}
+#que-somos{
+		text-decoration: none;
+		color: gainsboro;
+		background-color: #282828;
+
+
+
+}
+
+p a:hover{
+	color: lightgreen;
+
+}
+
+#quien a:hover{
+	color: lightgreen;
+}
+
+#que-somos:hover{
+	color: lightgreen;
+}
+
+.parrafo{
+	text-align: center;
+	margin-bottom: 5vh;
+	margin-top: 4vh;
+	font-size: 130%;
+}
+
+#parrafo{
+	color: gainsboro;
+}
+
+@media (max-width:450px) {
+	#hamb{
+		width: 10vw;
+		position: absolute;
+		z-index: 20;
+		margin-left: 83vw;
+    margin-top: 2vw;
+    margin-bottom: 7vw;
+		cursor: pointer;
+		display: block;
+
+	}
+	.second-footer{
+		background-color: rgba(254, 209 , 54, 0.7);
+
+
+	}
+	.second-footer a {
+		font-size: 10vw;
+		color: black;
+	}
+
+	.second-footer a:hover{
+		color: rgba(254, 209 , 54, 0)
+
+	}
+div .preguntas{
+
+	text-align: center;
+}
+
+#que{
+	color: gainsboro;
+}
+
+	#menu-footer{
+		display: none;
+	}
+	.opciones-menu{
+		display: none;
+	}
+.footer-menu2{
+	position: relative;
+}
+
+	#menu-footer:checked ~ .opciones-menu{
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 50%;
+		width: 100%;
+		transform: translateX(50%);
+
+	}
+	#menu-footer:checked ~ #hamb{
+		display: none;
+	}
+
+
 }
 
 @media (min-width:640px)  {
@@ -434,6 +652,7 @@ height: 10vw;
 	font-size: 7vw;
 	margin-top: 1vw;
 	margin-left: 10vw;
+
 
 }
 .main-header button{
@@ -477,12 +696,14 @@ margin-left: 5vw;
 #registrate2{
 
 	padding: 1vw;
-	background-color: gainsboro;
+	background-color: #fed136;
 	font-size: 3vw;
-	font-family: 'Cabin Sketch', cursive;
+	font-family: 'roboto', sans serif;
 	margin-top: 2vw;
-
+	border: solid white 2px;
 }
+
+
 
 div.boton-presentacion{
 
@@ -515,10 +736,24 @@ width: 30%;
 #que-somos{
 	font-size: 350%;
 
+    color: gainsboro;
+    background-color: #282828;
+
+}
+.preguntas{
+	margin-top: 6vh;
+}
+.equipo{
+
+	margin-top: 5vh;
+	margin-bottom: 5vh;
 }
 #quienes-somos{
 font-size: 350%;
 
+    color: gainsboro;
+    background-color: #282828;
+		text-align: center;
 }
 
 #que{
@@ -528,7 +763,7 @@ font-size: 350%;
 	margin-top: 3vw;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
-
+	text-align: center;
 }
 
 #quien{
@@ -539,11 +774,50 @@ font-size: 350%;
 footer{
 
 	overflow: hidden;
+	background-color: black;
 }
 footer ul{
 display: flex;
 justify-content: space-between;
+background-color: black;
 
+}
+
+.equipo{
+	background: #c15757;
+}
+#team{
+	background-color: #c15757;
+}
+
+.descripcion{
+	background-color: #c15757;
+}
+
+
+
+#footerliquid{
+	display: flex;
+	justify-content: space-around;
+	text-decoration: none;
+	list-style: none;
+	background-color: black;
+}
+#footerliquid li a{
+	background-color: : black;
+}
+
+li a{
+	background-color: black;
+	font-size: 30px;
+}
+
+#nuestroteam{
+	font-size: 50px;
+}
+.contenido{
+
+	background-color: #282828;
 }
 
 }
