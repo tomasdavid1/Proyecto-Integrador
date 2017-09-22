@@ -1,3 +1,5 @@
+<?php require('../validacion.php'); ?>
+
 <!DOCTYPE html>
 
 

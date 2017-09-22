@@ -1,5 +1,3 @@
-<pre>
-
 <?php
 
 
@@ -38,7 +36,7 @@ function validarCampo(){
 
   if ($_POST['password']!== $_POST['password2']){
 
-    $errores['password'] =  "passwords don't match"
+    $errores['password'] =  "passwords don't match";
 
   }
 
@@ -65,7 +63,7 @@ function hasheo($formulario){
 
   return $password;
 
-};
+}
 
 function json($datosOk){
 
@@ -84,11 +82,11 @@ $_SESSION = $a;
 return $_SESSION;
 }
 
-function campoVacio($_POST){
+function campoVacio($data){
 
 
 
-  foreach ($_POST as $key => $value) {
+  foreach ($data as $key => $value) {
 
     if (campoCompleto($value) == false) {
 
@@ -103,17 +101,13 @@ function campoVacio($_POST){
 
 function tieneSesion(){
 
-if ($_SESSION) {
-  $log_in['username'] = $_SESSION['username'];
-  $log_in['password'] = $_SESSION['password'];
+  if ($_SESSION) {
+    $log_in['username'] = $_SESSION['username'];
+    $log_in['password'] = $_SESSION['password'];
 
-}
+  }
 
 }
 
 
  ?>
-
-</pre>
-
-</pre>

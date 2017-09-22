@@ -2,17 +2,24 @@
 
 <?php
 
-if ($_POST) {
+if($_SESSION){
+
+header('bienvenido.php')
+
+
+} else {
+    if ($_POST) {
 
   campoVacio($_POST);
   $errores = validarCampo();
   $logIn = buscarUsuario($_POST);
-  if ($logIn['mail']== $POST['mail'] && $logIn['password']== $POST['password']) {
+  if ($logIn['mail']== $POST['mail'] && password_verify($logIn['password']) == $POST['password']) {
 
     iniciarSesion($logIn);
     header('bienvenido.php');
 
 
+    }
   }
 }
 

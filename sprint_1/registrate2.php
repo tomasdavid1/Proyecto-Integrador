@@ -10,12 +10,11 @@ $name = "";
 $username = "";
 $apellido = "";
 
-
 if($_POST){
 
   campoVacio($_POST);
   $errores = validarCampo();
-  var_dump($errores);
+  //var_dump($errores);
   if($errores){
     if(isset($errores["email"])){
       echo $errores["email"];
@@ -48,8 +47,8 @@ if($_POST){
 
 
   } else {
-    $datoValido["nombre"] = $_POST["name"]
-    $datoValido["apellido"] = $_POST["apellido"];;
+    $datoValido["nombre"] = $_POST["nombre"];
+    $datoValido["apellido"] = $_POST["apellido"];
     $datoValido["email"] = $_POST["email"];
     $datoValido["username"] = $_POST["username"];
     $datoValidado["password"] = hasheo($_POST);
