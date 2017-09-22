@@ -10,6 +10,7 @@ $username = "";
 
 if($_POST){
 
+  campoVacio($_POST);
   $errores = validarCampo();
   var_dump($errores);
   if($errores){
@@ -38,19 +39,12 @@ if($_POST){
 
     iniciarSesion($datoValido);
 
-    header("Location: clase-9-bienvenido.php");
+    header("Location: bienvenido.php");
   }
 }
 
 
-foreach ($_POST as $key => $value) {
 
-  if (campoCompleto($value) == false) {
-
-    echo $key. " es obligatorio";
-
-  }
-}
 
 
 

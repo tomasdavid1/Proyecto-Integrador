@@ -12,7 +12,7 @@ echo buscarUsuario($_SESSION);
     <meta charset="utf-8">
     <title>
       <?php
-      in
+      
       echo buscarUsuario($_SESSION);
 
 

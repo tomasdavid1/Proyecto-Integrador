@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -27,8 +29,8 @@
 
 
 
-  				  <button type="button"  name="button"><a href="registrate2.html">Registrate</a></button>
-            <button type="button" id="inicia-sesion" name="button"><a href="iniciar-sesion.html">Iniciar Sesion</a></button>
+  				  <button type="button"  name="button"><a href="registrate2.php">Registrate</a></button>
+            <button type="button" id="inicia-sesion" name="button"><a href="iniciar-sesion.php">Iniciar Sesion</a></button>
 
 
               <div class="divheader">
@@ -85,7 +87,7 @@
 
   				</div>
   				    <p id= "quien">Inspirados en la cultura japonesa creamos IKIGAI.<br>
-                Es la primera plataforma para poder desarroyar tus ideas a la vez que las organizas para encontrar eso que te hace falta.<br>
+                Es la primera plataforma para poder desarrollar tus ideas a la vez que las organizas para encontrar eso que te hace falta.<br>
                 Con Ikigai nunca vas a estar sólo.<br>
                 Vas a poder conectarte con amigos y colegas que te ayuden a unir tu vocación, tu profesión, tu misión y tu profesión.
                 <br> <a href="Explicar.html">(Si querés, acá te lo explicamos con un grafiquito)</a></p>

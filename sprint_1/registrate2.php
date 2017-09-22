@@ -1,4 +1,74 @@
-<!DOCTYPE html>
+
+<?php
+
+
+require '../validacion.php';
+
+
+$email = "";
+$name = "";
+$username = "";
+$apellido = "";
+
+
+if($_POST){
+
+  campoVacio($_POST);
+  $errores = validarCampo();
+  var_dump($errores);
+  if($errores){
+    if(isset($errores["email"])){
+      echo $errores["email"];
+    } else {
+      $email = $_POST["email"];
+    }
+    if(isset($errores["nombre"])){
+      echo $errores["nombre"];
+    } else {
+      $name = $_POST["nombre"];
+    }
+    if(isset($errores["username"])){
+        echo $errores["username"];
+    } else {
+      $username = $_POST["username"];
+    }
+
+    if(isset($errores["apellido"])){
+      echo $errores["apelldo"];
+    } else {
+      $apellido = $_POST["apellido"];
+    }
+
+    if(isset($errores["password"])){
+      echo $errores["password"];
+    } else {
+      $password = $_POST["password"];
+    }
+
+
+
+  } else {
+    $datoValido["nombre"] = $_POST["name"]
+    $datoValido["apellido"] = $_POST["apellido"];;
+    $datoValido["email"] = $_POST["email"];
+    $datoValido["username"] = $_POST["username"];
+    $datoValidado["password"] = hasheo($_POST);
+
+    json($datoValido);
+
+    iniciarSesion($datoValido);
+
+    header("Location: bienvenido.php");
+  }
+}
+
+
+
+
+
+?>
+
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -45,22 +115,24 @@
     <form action="homepage.html" method="POST">
 
 <div class="campo">
-      <label for="nombre">Nombre:</label>      <input id="nombre" type="text" name="nombre1" required placeholder="Nombre" >
+      <label for="nombre">Nombre:</label>      <input id="nombre" type="text" name="nombre" required placeholder="Nombre" value='<?php echo $nombre ?>' >
 </div>
 <div class="campo">
       <label for="apellido">Apellido:</label>
-      <input id="apellido" type="text" name="apellido2" required placeholder="Apellido">
+      <input id="apellido" type="text" name="apellido" required placeholder="Apellido" value= '<?php echo $apellido ?>'>
 
 </div>
 <div class="campo">
-      <label for="date">Fecha de nacimiento:</label>
-      <input id="date" type="text" name="" value="" placeholder="Día/Mes/Año">
+      <label for="date"> Usuario: </label>
+      <input id="date" type="text" name="username" value='<?php echo $username ?>' placeholder="">
+
+
 
 
 </div>
 <div class="campo">
       <label for="email">E-mail</label>
-      <input type="email" name="email" id="email" value="" placeholder="Escribí tu correo electrónico">
+      <input type="email" name="email" id="email" value= '<?php echo $email ?>' placeholder="Escribí tu correo electrónico">
 
 </div>
 
@@ -73,7 +145,7 @@
 </div>
 <div class="campo">
       <label for="password">Repetir contraseña</label>
-      <input type="password" name="password" id="password" value="" placeholder="Repetir contraseña">
+      <input type="password" name="password2" id="password" value="" placeholder="Repetir contraseña">
 
 </div>
 

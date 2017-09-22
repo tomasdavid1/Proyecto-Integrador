@@ -1,4 +1,25 @@
 <!DOCTYPE html>
+
+<?php
+
+if ($_POST) {
+
+  campoVacio($_POST);
+  $errores = validarCampo();
+  $logIn = buscarUsuario($_POST);
+  if ($logIn['mail']== $POST['mail'] && $logIn['password']== $POST['password']) {
+
+    iniciarSesion($logIn);
+    header('bienvenido.php');
+
+
+  }
+}
+
+
+
+
+ ?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -42,12 +63,12 @@
 
 
 
-    <form action="homepage.html" method="GET">
+    <form action="iniciar-sesion.php" method="POST">
 
 
 <div class="campo">
-      <label for="email">E-mail</label>
-      <input type="email" name="email" id="email" value="" placeholder="Escribí tu correo electrónico">
+      <label for="email">Usuario</label>
+      <input type="email" name="username" id="email" value="" placeholder="Usuario">
 
 </div>
 
@@ -59,7 +80,10 @@
 
 </div>
 
-
+
+<div class="">
+      <button type="button" >Olvide mi contraseña</button>
+</div>
 
       <div class="enviar">
 
