@@ -24,21 +24,35 @@ if ($gestor) {
 
 function validarCampo(){
   $errores = [];
-  if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    $errores["email"] = $_POST['email'] . "is not a valid email address";
+  if ( $_POST['email'] == false) {
+  $errores["email"] = $_POST['email'] . "email is required";
+  } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    $errores["email"] = $_POST['email'] . " is not a valid email address";
+  } //else if (){
+      //aca deberia revisar si existe o no el mail
+  //}
+
+  if ( $_POST['apellido'] == false) {
+  $errores["apellido"] = $_POST['apellido'] . "last name is required";
+} else if (!is_string($_POST['apellido'])) {
+    $errores["apellido"] = $_POST['apellido'] . " is not a valid last name ";
   }
 
-  if (!is_string($_POST['nombre'])) {
-    $errores["nombre"] = $_POST['nombre'] . "is not a valid name";
+  if ( $_POST['nombre'] == false) {
+  $errores["nombre"] = $_POST['nombre'] . "name is required";
+} else if (!is_string($_POST['nombre'])) {
+    $errores["nombre"] = $_POST['nombre'] . " is not a valid name";
   }
-
-  if (!is_string($_POST['username'])){
-    $errores["username"] =  $_POST['username'] . "is not a valid username";
+  if ( $_POST['username'] == false) {
+  $errores["username"] = $_POST['username'] . "username is required";
+} else if (!is_string($_POST['username'])) {
+    $errores["username"] = $_POST['username'] . " is not a valid username ";
   }
+  if ( $_POST['password'] == false) {
+  $errores["password"] = $_POST['password'] . "username is required";
+} else if ($_POST['password']!== $_POST['password2']){
 
-  if ($_POST['password']!== $_POST['password2']){
-
-    $errores['password'] =  "passwords don't match";
+    $errores['password'] =  " passwords don't match";
 
   }
 

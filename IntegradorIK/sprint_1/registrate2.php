@@ -8,38 +8,13 @@ $apellido = "";
 
 if($_POST){
 
+
   campoVacio($_POST);
   $errores = validarCampo();
+  var_dump($errores);
   //var_dump($errores);
-  if($errores){
-    if(isset($errores["email"])){
-      echo $errores["email"];
-    } else {
-      $email = $_POST["email"];
-    }
-    if(isset($errores["nombre"])){
-      echo $errores["nombre"];
-    } else {
-      $nombre = $_POST["nombre"];
-    }
-    if(isset($errores["username"])){
-        echo $errores["username"];
-    } else {
-      $username = $_POST["username"];
-    }
+  if($errores == ''){
 
-    if(isset($errores["apellido"])){
-      echo $errores["apelldo"];
-    } else {
-      $apellido = $_POST["apellido"];
-    }
-
-    if(isset($errores["password"])){
-      echo $errores["password"];
-    } else {
-      $password = $_POST["password"];
-    }
-  } else {
     $datoValido["nombre"] = $_POST["nombre"];
     $datoValido["apellido"] = $_POST["apellido"];
     $datoValido["email"] = $_POST["email"];
@@ -81,29 +56,56 @@ if($_POST){
         </div>
         <div class="cuerpo">
           <form action="registrate2.php" method="POST">
+
+            <?php if (isset($errores['nombre'])) { ?>
+              <div class="errores-de-campo">
+               <?php echo  $errores['nombre'] ; ?>
+              </div>
+            <?php }  ?>
             <div class="campo">
               <label for="nombre">Nombre:</label>
-                <input id="nombre" type="text" name="nombre" required placeholder="Nombre" value=' <?php echo $nombre ?>'>
+                <input id="nombre" type="text" name="nombre"  placeholder="Nombre" value='<?php echo $nombre ?>'>
               </div>
-              <div class="campo">
-                <label for="apellido">Apellido:</label>
-                <input id="apellido" type="text" name="apellido" required placeholder="Apellido" value='<?php echo $apellido ?>'>
+              <?php if (isset($errores['apellido'])) { ?>
+                <div class="errores-de-campo">
+                 <?php echo  $errores['apellido'] ; ?>
                 </div>
+              <?php }  ?>
+              <div class="campo">
+
+                <label for="apellido">Apellido:</label>
+                <input id="apellido" type="text" name="apellido"  placeholder="Apellido" value='<?php echo $apellido ?>'>
+                </div>
+                <?php if (isset($errores['username'])) { ?>
+                  <div class="errores-de-campo">
+                   <?php echo  $errores['username'] ; ?>
+                  </div>
+                <?php }  ?>
                 <div class="campo">
                   <label for="date"> Usuario: </label>
-                  <input id="date" type="text" name="username" requiered placeholder="usuario" value='<?php echo $username ?>' placeholder="">
+                  <input id="date" type="text" name="username"  placeholder="Usuario" value='<?php echo $username ?>' placeholder="">
                 </div>
                 <div class="campo">
+                  <?php if (isset($errores['email'])) { ?>
+                    <div class="errores-de-campo" >
+                      <?php echo $errores['email']; ?>
+                      </div>
+                  <?php }  ?>
                   <label for="email">E-mail</label>
-                  <input type="text" name="email" id="email" requiered value='<?php echo $email ?>' placeholder="Escribí tu correo electrónico">
+                  <input type="text" name="email" id="email"  value='<?php echo $email ?>' placeholder="E-Mail">
                 </div>
                 <div class="campo">
+                  <?php if (isset($errores['password'])) { ?>
+                    <div class="errores-de-campo">
+                     <?php echo  $errores['password'] ; ?>
+                    </div>
+                  <?php }  ?>
                   <label for="password">Contraseña</label>
-                  <input type="password" name="password" requiered id="password" value="" placeholder="Contraseña">
+                  <input type="password" name="password"  id="password" value="" placeholder="Contraseña">
                 </div>
                 <div class="campo">
                   <label for="password">Repetir contraseña</label>
-                  <input type="password" name="password2" requiered id="password" value="" placeholder="Repetir contraseña">
+                  <input type="password" name="password2"  id="password" value="" placeholder="Repetir contraseña">
 
                 </div>
 
@@ -116,7 +118,7 @@ if($_POST){
             </form>
           </div>
           <div class="mandale">
-            <h2 id="tenerunacuenta">¿Ya tenes una cuenta?<br> <a href="iniciar-sesion.<?php  ?>" id="iniciar">Inicia Sesion!</a></h3>
+            <h2 id="tenerunacuenta">¿Ya tenes una cuenta?<br> <a href="iniciar-sesion.php" id="iniciar">Inicia Sesion!</a></h3>
 
             </div>
             <div class="redes-sociales">
