@@ -9,16 +9,17 @@ $gestor = fopen("usuarios.json", "r");
 if ($gestor) {
     while (($linea = fgets($gestor))) {
     $usuario = json_decode($linea, true);
-    if ($usuario['mail'] == $formulario['mail']) {
-      fclose($gestor);
+    if ($usuario['mail'] == $formulario['mail'] || $usuario['username'] == $formulario['username'] ) {
       return $usuario;
-      }
+      fclose($gestor);
+    } else {
+      echo "email or username doesen't exist";
+    }
 
     }
-    fclose($gestor);
-    return false;
-
+  fclose($gestor);
 }
+return $usuario;
 }
 
 
@@ -59,6 +60,18 @@ function validarCampo(){
   return $errores;
 }
 
+function validarLogIn(){
+
+$errores = [];
+if ($_POST['username'] == false) {
+$errores["username"] = $_POST['username'] . "username is required";};
+
+if ($_POST['password'] == false ){
+  $errores["password"] = $_POST['password'] . "password is required";
+}
+
+}
+
 function campoCompleto($campo){
   if (!empty($campo)) {
 
@@ -85,14 +98,9 @@ function json($datosOk){
 
       $json = json_encode($datosOk) . PHP_EOL;
       file_put_contents("usuarios.json", $json, FILE_APPEND | LOCK_EX);
-      // $todosLosUsuarios = json_decode(file_get_contents("clase-9-archivo.json"), true);
-
-  // } else {
-  //   $todosLosUsuarios = [];
-  // }
 
 }
-function iniciarSesion($a){
+function almacenarEnSession($a){
 session_start();
 $_SESSION = $a;
 return $_SESSION;

@@ -8,12 +8,9 @@ $apellido = "";
 
 if($_POST){
 
-
-  campoVacio($_POST);
   $errores = validarCampo();
-  var_dump($errores);
-  //var_dump($errores);
-  if($errores == ''){
+
+  if(!$errores){
 
     $datoValido["nombre"] = $_POST["nombre"];
     $datoValido["apellido"] = $_POST["apellido"];
@@ -23,9 +20,12 @@ if($_POST){
 
     json($datoValido);
 
-    iniciarSesion($datoValido);
+    almacenarEnSession($datoValido);
 
+    header('bienvenido.php');
 
+  } else {
+    header('registrate2.php');
   }
 }
 ?>
