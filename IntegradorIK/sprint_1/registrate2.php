@@ -58,6 +58,7 @@ if($_POST){
       $register_time= date('Y-m-d h:i:s')]
     );
 
+    //para juanca, para que corrobore que podemos usar archivos json :D
     $json_query= $db->prepare('SELECT * FROM usuarios WHERE email = :email');
     $email = $_POST['email'];
     $json_query->bindValue(':email', $email, PDO::PARAM_STR);
@@ -79,7 +80,7 @@ if($_POST){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="registrate2.css">
+    <link rel="stylesheet" href="registrate.css">
     <link rel="stylesheet" href="animate.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Roboto|Slabo+27px" rel="stylesheet">
