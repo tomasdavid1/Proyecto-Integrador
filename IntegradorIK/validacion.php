@@ -26,9 +26,7 @@ function subirImagen(){
 if($_FILES["imgPerfil"]["error"] == UPLOAD_ERR_OK) {
   $nombre = $_FILES["imgPerfil"]["name"];
   $archivo= $_FILES["imgPerfil"]["tmp_name"];
-  $ext = pathinfo($nombre, PATHINFO_EXTENSION);
-  $miArchivo = dirname("sprint_1") . PHP_EOL;
-  move_uploaded_file($archivo, $miArchivo);
+  move_uploaded_file($archivo, "Desktop/proyecto-integrador-DH/IntegradorIK");
 }
 
 }
@@ -140,22 +138,7 @@ $_SESSION = $a;
 return $_SESSION;
 }
 
-function campoVacio($data){
 
-
-
-  foreach ($data as $key => $value) {
-
-    if (campoCompleto($value) == false) {
-
-      echo $key. " es obligatorio";
-
-
-
-    }
-  }
-
-}
 
 function tieneSesion(){
   if ($_SESSION) {

@@ -58,8 +58,12 @@ if($_POST){
       $register_time= date('Y-m-d h:i:s')]
     );
 
-    /*$json = 'SELECT * FROM usuarios WHERE id = last id*'
-    json($json);*/
+    $json_query= $db->prepare('SELECT * FROM usuarios WHERE email = :email');
+    $email = $_POST['email'];
+    $json_query->bindValue(':email', $email, PDO::PARAM_STR);
+    $json_query->execute();
+    $results = $json_query->fetch(PDO::FETCH_ASSOC);
+    json($results);
 
 
 
@@ -156,7 +160,7 @@ if($_POST){
                 <input type="hidden" name="MAX_FILE_SIZE" value="30000">
                 Avatar:<input type="file" name="imgPerfil">
                 <div class="enviar">
-                  
+
                   <button type="submit">
                     Enviar
                   </button>

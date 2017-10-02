@@ -23,7 +23,7 @@ if($_SESSION){
       $query->bindValue(':email', $email, PDO::PARAM_STR);
       $query->execute();
       $results = $query->fetch(PDO::FETCH_ASSOC);
-      var_dump($results);
+      var_dump($results); 
       var_dump($_POST);
       echo '<br>verificando clave->'.password_verify($_POST['password'], $results['password']);
       if (password_verify($_POST['password'], $results['password'])) {
