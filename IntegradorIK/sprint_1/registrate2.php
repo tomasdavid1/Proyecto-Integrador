@@ -1,14 +1,35 @@
 <?php
 
+
 require '../validacion.php';
 $email = "";
 $nombre = "";
 $username = "";
 $apellido = "";
 
+
+if ($_FILES) {
+  subirImagen();
+}
+
 if($_POST){
 
   $errores = validarCampo();
+
+  if (isset($errores['nombre'])) {
+    $nombre = $_POST['nombre'];
+  }
+  if (isset($errores['apellido'])) {
+    $apellido = $_POST['apellido'];
+  }
+  if (isset($errores['username'])){
+    $username = $_POST['username'];
+  }
+  if (isset($errores['email'])){
+    $email = $_POST['email'];
+  }
+
+
 
   if(!$errores){
 
@@ -18,16 +39,37 @@ if($_POST){
     $datoValido["username"] = $_POST["username"];
     $datoValido["password"] = hasheo($_POST);
 
-    json($datoValido);
+
+
+
+    $host= 'mysql:host=localhost;dbname=IKIGAI;charset=utf8mb4;port=3306';
+    $db_user= 'root';
+    $db_pass='root';
+    $db = new PDO ($host, $db_user, $db_pass, [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
+    $sql = 'INSERT INTO usuarios (nombre, apellido, email, usuario, password, register_time ) VALUES (?,?,?,?,?,?); ';
+    $stmt = $db->prepare($sql);
+
+    $stmt->execute(
+    [ $datoValido["nombre"],
+      $datoValido["apellido"],
+      $datoValido["email"],
+      $datoValido["username"],
+      $datoValido["password"],
+      $register_time= date('Y-m-d h:i:s')]
+    );
+
+    /*$json = 'SELECT * FROM usuarios WHERE id = last id*'
+    json($json);*/
+
+
 
     almacenarEnSession($datoValido);
 
-    header('bienvenido.php');
+    header('Location:Bienvenido.php');
 
-  } else {
-    header('registrate2.php');
   }
-}
+  }
+
 ?>
   <html>
   <head>
@@ -55,7 +97,9 @@ if($_POST){
           Registrate
         </div>
         <div class="cuerpo">
-          <form action="registrate2.php" method="POST">
+          <form action="registrate2.php" method="POST" enctype="multipart/form-data">
+
+
 
             <?php if (isset($errores['nombre'])) { ?>
               <div class="errores-de-campo">
@@ -109,7 +153,10 @@ if($_POST){
 
                 </div>
 
+                <input type="hidden" name="MAX_FILE_SIZE" value="30000">
+                Avatar:<input type="file" name="imgPerfil">
                 <div class="enviar">
+                  
                   <button type="submit">
                     Enviar
                   </button>

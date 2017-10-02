@@ -1,10 +1,9 @@
 <?php
 
 
-$valor = $_POST;
 
-function buscarUsuario($formulario){
 
+/*
 $gestor = fopen("usuarios.json", "r");
 if ($gestor) {
     while (($linea = fgets($gestor))) {
@@ -13,25 +12,46 @@ if ($gestor) {
       return $usuario;
       fclose($gestor);
     } else {
-      echo "email or username doesen't exist";
+      return $error =  'el usuario no existe ';
     }
 
     }
   fclose($gestor);
 }
-return $usuario;
+
+}*/
+
+function subirImagen(){
+
+if($_FILES["imgPerfil"]["error"] == UPLOAD_ERR_OK) {
+  $nombre = $_FILES["imgPerfil"]["name"];
+  $archivo= $_FILES["imgPerfil"]["tmp_name"];
+  $ext = pathinfo($nombre, PATHINFO_EXTENSION);
+  $miArchivo = dirname("sprint_1") . PHP_EOL;
+  move_uploaded_file($archivo, $miArchivo);
 }
 
-
+}
 function validarCampo(){
   $errores = [];
   if ( $_POST['email'] == false) {
   $errores["email"] = $_POST['email'] . "email is required";
   } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     $errores["email"] = $_POST['email'] . " is not a valid email address";
-  } //else if (){
-      //aca deberia revisar si existe o no el mail
-  //}
+  } else {
+    $host= 'mysql:host=localhost;dbname=IKIGAI;charset=utf8mb4;port=3306';
+    $db_user= 'root';
+    $db_pass='root';
+    $db = new PDO ($host, $db_user, $db_pass);
+    $query = $db->prepare('SELECT usuario FROM usuarios where usuario = :email;');
+    $email = $_POST['email'];
+    $query->bindValue(':email', $email, PDO::PARAM_STR);
+    $query->execute();
+    if ($results=$query->fetch(PDO::FETCH_ASSOC)) {
+     $errores['email']= $_POST['email'].'usernme already exists';
+    }
+
+  }
 
   if ( $_POST['apellido'] == false) {
   $errores["apellido"] = $_POST['apellido'] . "last name is required";
@@ -63,10 +83,10 @@ function validarCampo(){
 function validarLogIn(){
 
 $errores = [];
-if ($_POST['username'] == false) {
-$errores["username"] = $_POST['username'] . "username is required";};
+if (!isset($_POST['email'])) {
+  $errores["email"] = $_POST['email'] . "username is required";};
 
-if ($_POST['password'] == false ){
+if (!isset($_POST['password'])){
   $errores["password"] = $_POST['password'] . "password is required";
 }
 
@@ -81,6 +101,20 @@ function campoCompleto($campo){
     }
 }
 
+
+function recuerdame(){
+
+if (isset($_POST['recuerdame'])) {
+
+setcookie('email', $datoValido, time()+60*60*7);
+setcookie('password', $datoValido, time()+60*60*7);
+
+
+};
+
+
+
+}
 
 
 function hasheo($formulario){
@@ -101,7 +135,7 @@ function json($datosOk){
 
 }
 function almacenarEnSession($a){
-session_start();
+
 $_SESSION = $a;
 return $_SESSION;
 }
